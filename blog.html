@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Go Beyond Borders - Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f9ff;
+      color: #333;
+      line-height: 1.6;
+      padding-top: 80px; /* to offset fixed header */
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #0077b6;
+      color: white;
+      padding: 15px 30px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6em;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      white-space: nowrap;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #90e0ef;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .blog-post {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .post-title {
+      margin: 0;
+      color: #0077b6;
+      font-size: 1.5em;
+    }
+
+    .post-date {
+      font-size: 0.9em;
+      color: #555;
+      font-style: italic;
+    }
+
+    .post-excerpt {
+      font-size: 1em;
+      color: #333;
+    }
+
+    .read-more {
+      align-self: flex-start;
+      margin-top: 10px;
+      background-color: #0077b6;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-more:hover {
+      background-color: #0096c7;
+    }
+
+    /* Footer styling - apply on all screen sizes */
+    footer {
+      background: #023e8a; /* navy */
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .blog-post {
+        flex-direction: column;
+      }
+      .post-image {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Go Beyond Borders</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="blog-post">
+      <img src="images/kv.jpg" alt="Kinderdijk Windmills" class="post-image" />
+      <div class="post-content">
+        <h2 class="post-title">Exploring the Historic Windmills of Kinderdijk</h2>
+        <time class="post-date" datetime="2025-09-01">September 1, 2025</time>
+        <p class="post-excerpt">
+          Discover the ingenious Dutch water management system through the iconic 18th-century windmills at Kinderdijk.
+        </p>
+        <a href="https://www.holland.com/global/tourism/get-inspired/current/unesco/the-windmills-of-kinderdijk" class="read-more">Read More</a>
+      </div>
+    </article>
+
+    <article class="blog-post">
+      <img src="images/anne.jpg" alt="Anne Frank House" class="post-image" />
+      <div class="post-content">
+        <h2 class="post-title">Visiting the Anne Frank House: A Journey Through History</h2>
+        <time class="post-date" datetime="2025-08-15">August 15, 2025</time>
+        <p class="post-excerpt">
+          Step inside the secret annex where Anne Frank wrote her diary and reflect on the importance of tolerance and human rights.
+        </p>
+        <a href="https://www.annefrank.org/en/" class="read-more">Read More</a>
+      </div>
+    </article>
+
+    <article class="blog-post">
+      <img src="images/london.jpg" alt="London Hotels" class="post-image" />
+      <div class="post-content">
+        <h2 class="post-title">Top Hotels to Stay in London for Your Next Visit</h2>
+        <time class="post-date" datetime="2025-07-20">July 20, 2025</time>
+        <p class="post-excerpt">
+          From luxury to budget-friendly, explore the best hotels near London's iconic landmarks to make your trip comfortable and memorable.
+        </p>
+        <a href="https://www.besthotelsguides.com/?ufi=-2601889&gad_source=1&gad_campaignid=318963183&gbraid=0AAAAAD-Rb7VxkNqE9rt7L_NpcOPYftrSb&gclid=CjwKCAjwz5nGBhBBEiwA-W6XRNFgDPxttugWj1vn9noSe_lpTJJK6k-A2dnBHmBIsGcC2qirgAV1fBoCxtMQAvD_BwE" class="read-more">Read More</a>
+      </div>
+    </article>
+
+    <!-- New blog post #4 -->
+    <article class="blog-post">
+      <img src="images/machu.jpg" alt="Machu Picchu" class="post-image" />
+      <div class="post-content">
+        <h2 class="post-title">Hiking the Inca Trail to Machu Picchu</h2>
+        <time class="post-date" datetime="2025-09-10">September 10, 2025</time>
+        <p class="post-excerpt">
+          Experience the breathtaking views and ancient ruins on the world-famous Inca Trail leading to Machu Picchu.
+        </p>
+        <a href="https://www.peru.travel/en/what-to-do/machu-picchu" class="read-more">Read More</a>
+      </div>
+    </article>
+
+    <!-- New blog post #5 -->
+    <article class="blog-post">
+      <img src="images/tokyo.jpg" alt="Tokyo Skyline" class="post-image" />
+      <div class="post-content">
+        <h2 class="post-title">Exploring Tokyo: A Blend of Tradition and Future</h2>
+        <time class="post-date" datetime="2025-09-12">September 12, 2025</time>
+        <p class="post-excerpt">
+          Discover Tokyo’s bustling streets, historic temples, and cutting-edge technology in one of the world's most dynamic cities.
+        </p>
+        <a href="https://www.gotokyo.org/en/" class="read-more">Read More</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>Created by: Kathleen L. Pagkaliwangan | Class: IT3G</p>
+  </footer>
+
+</body>
+</html>

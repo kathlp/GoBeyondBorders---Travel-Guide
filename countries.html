@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Beyond Borders - Countries</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #e6f2ff; /* light blue to remove white spaces */
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      left: 0;
+      background: #0077b6; /* deep ocean blue */
+      color: white;
+      padding: 15px 30px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: #90e0ef;
+    }
+
+    /* Countries Section */
+    .countries {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 100px 20px 40px; /* push down for header */
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #f0f9ff, #cce7ff);
+    }
+
+    .country {
+      width: 240px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 15px;
+      background: #f9f9f9;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .country:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .country img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .country h3 {
+      margin: 15px 0 10px;
+    }
+
+    /* Country title links */
+    .country h3 a {
+      text-decoration: none;
+      color: #0077b6; /* blue for country names */
+      font-weight: bold;
+    }
+
+    .country h3 a:hover {
+      color: #0077b6;
+    }
+
+    /* Explore Button */
+    .explore-btn {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #0077b6;
+      color: white !important;        /* force text white */
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none !important;
+      display: inline-block;
+    }
+
+    /* Footer */
+    footer {
+      background: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Go Beyond Borders</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Countries Section -->
+  <section class="countries">
+    <div class="country">
+      <img src="images/newyork.jpg" alt="USA">
+      <h3><a href="USA.html">United States of America</a></h3>
+      <a href="USA.html" class="explore-btn">Explore Now</a>
+    </div>
+    <div class="country">
+      <img src="images/japan.jpg" alt="Japan">
+      <h3><a href="japan.html">Japan</a></h3>
+      <a href="japan.html" class="explore-btn">Explore Now</a>
+    </div>
+    <div class="country">
+      <img src="images/amsterdam.jpg" alt="Netherlands">
+      <h3><a href="netherlands.html">Netherlands</a></h3>
+      <a href="netherlands.html" class="explore-btn">Explore Now</a>
+    </div>
+    <div class="country">
+      <img src="images/barcelona.jpg" alt="Spain">
+      <h3><a href="spain.html">Spain</a></h3>
+      <a href="spain.html" class="explore-btn">Explore Now</a>
+    </div>
+    <div class="country">
+      <img src="images/london.jpg" alt="UK">
+      <h3><a href="uk.html">United Kingdom</a></h3>
+      <a href="uk.html" class="explore-btn">Explore Now</a>
+    </div>
+
+    <!-- Extra filler cards -->
+    <div class="country">
+      <img src="images/ph.jpg" alt="Philippines">
+      <h3><a href="#">Philippines</a></h3>
+      <a href="#" class="explore-btn">Explore Now</a>
+    </div>
+    <div class="country">
+      <img src="images/italy.jpg" alt="Italy">
+      <h3><a href="#">Italy</a></h3>
+      <a href="#" class="explore-btn">Explore Now</a>
+    </div>
+    <div class="country">
+      <img src="images/switz.jpg" alt="Switzerland">
+      <h3><a href="#">Switzerland</a></h3>
+      <a href="#" class="explore-btn">Explore Now</a>
+    </div>
+    <div class="country">
+      <img src="images/china.jpg" alt="China">
+      <h3><a href="#">China</a></h3>
+      <a href="#" class="explore-btn">Explore Now</a>
+    </div>
+    <div class="country">
+      <img src="images/canada.jpg" alt="Canada">
+      <h3><a href="#">Canada</a></h3>
+      <a href="#" class="explore-btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Created by: Kathleen L. Pagkaliwangan | Class: IT3G</p>
+  </footer>
+
+</body>
+</html>

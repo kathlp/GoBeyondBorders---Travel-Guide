@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Go Beyond Borders</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f9ff;
+      color: #333;
+      padding-top: 80px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #0077b6;
+      color: white;
+      padding: 15px 30px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6em;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      margin-right: 50px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #90e0ef;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 40px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .contact-form,
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #0077b6;
+      color: white;
+      padding: 12px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0096c7;
+    }
+
+    .info-text {
+      font-size: 0.95em;
+      color: #555;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .map-container {
+      margin-top: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .office-hours {
+      margin-top: 20px;
+      background: #e0f4ff;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 0.95em;
+    }
+
+    .office-hours ul {
+      padding-left: 20px;
+    }
+
+    .socials {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      font-weight: bold;
+      color: #0077b6;
+      text-decoration: none;
+    }
+
+    .socials a:hover {
+      color: #0096c7;
+    }
+
+    footer {
+      background: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 60px;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Go Beyond Borders</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name..." required>
+          </div>
+
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email..." required>
+          </div>
+
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="info-text">
+          <p>We usually respond within 1–2 business days.</p>
+          <p>Email us directly at <strong>contact@gobeyondborders.com</strong></p>
+        </div>
+      </div>
+
+      <!-- Map & Info -->
+      <div class="contact-info">
+        <div class="map-container">
+          <h3>Our Location</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798903018!2d-74.25987568720906!3d40.69767006735421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDQxJzUxLjYiTiA3NMKwMTUnMjcuOSJX!5e0!3m2!1sen!2sus!4v1600000000000" loading="lazy" allowfullscreen></iframe>
+        </div>
+
+        <div class="office-hours">
+          <h3>Office Hours</h3>
+          <ul>
+            <li><strong>Mon – Fri:</strong> 9:00 AM – 6:00 PM</li>
+            <li><strong>Saturday:</strong> 10:00 AM – 2:00 PM</li>
+            <li><strong>Sunday:</strong> Closed</li>
+          </ul>
+        </div>
+
+        <div class="socials">
+          <p>Follow us:</p>
+          <a href="#" target="_blank">Facebook</a> |
+          <a href="#" target="_blank">Instagram</a> |
+          <a href="#" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Created by: Kathleen L. Pagkaliwangan | Class: IT3G</p>
+  </footer>
+
+</body>
+</html>
