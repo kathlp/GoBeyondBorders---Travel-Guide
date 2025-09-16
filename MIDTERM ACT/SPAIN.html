@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Go Beyond Borders - Spain</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f9ff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #0077b6;
+      color: white;
+      padding: 15px 30px;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6em;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-right: 50px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: #90e0ef;
+    }
+
+    .wonders {
+      padding: 100px 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .wonder {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 300px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .wonder:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .wonder img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .wonder-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 15px;
+    }
+
+    .wonder-content h3 {
+      margin-top: 0;
+      color: #0077b6;
+      font-size: 1.2em;
+    }
+
+    .wonder-content p {
+      font-size: 0.95em;
+      color: #333;
+    }
+
+    .more-btn {
+      margin-top: auto;
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .more-btn:hover {
+      background: #0096c7;
+    }
+
+    .hotels {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: #e6f2ff;
+      border-radius: 8px;
+    }
+
+    .hotel {
+      margin-bottom: 8px;
+      font-size: 0.9em;
+    }
+
+    .hotel strong {
+      color: #023e8a;
+    }
+
+    footer {
+      background: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .wonders {
+        flex-direction: column;
+        align-items: center;
+        padding: 90px 10px 30px;
+      }
+
+      header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+      }
+
+      header h1 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+
+      nav a {
+        margin: 10px;
+      }
+
+      .wonder {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Go Beyond Borders</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="wonders">
+    <div class="wonder">
+      <img src="images/sagrada.jpg" alt="Sagrada Familia">
+      <div class="wonder-content">
+        <h3>Sagrada Familia</h3>
+        <p>Gaudí’s magnificent basilica in Barcelona, still under construction after a century.</p>
+        <button class="more-btn" onclick="toggleHotels('sagrada-hotels')">More Info</button>
+        <div class="hotels" id="sagrada-hotels">
+          <div class="hotel"><strong>Gaudí Hotel</strong> - 0.3 km away - ⭐⭐⭐⭐ - €140/night</div>
+          <div class="hotel"><strong>Sagrada Inn</strong> - 0.5 km away - ⭐⭐⭐ - €110/night</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wonder">
+      <img src="images/alhambra.jpg" alt="Alhambra">
+      <div class="wonder-content">
+        <h3>Alhambra</h3>
+        <p>A Moorish palace and fortress complex in Granada, rich in Islamic architecture.</p>
+        <button class="more-btn" onclick="toggleHotels('alhambra-hotels')">More Info</button>
+        <div class="hotels" id="alhambra-hotels">
+          <div class="hotel"><strong>Granada Palace Hotel</strong> - 1 km away - ⭐⭐⭐⭐ - €125/night</div>
+          <div class="hotel"><strong>Historic Charm Inn</strong> - 0.7 km away - ⭐⭐⭐ - €95/night</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wonder">
+      <img src="images/park.jpg" alt="Park Güell">
+      <div class="wonder-content">
+        <h3>Park Güell</h3>
+        <p>Another Gaudí masterpiece, filled with colorful mosaics and unique architecture.</p>
+        <button class="more-btn" onclick="toggleHotels('parkguell-hotels')">More Info</button>
+        <div class="hotels" id="parkguell-hotels">
+          <div class="hotel"><strong>Barcelona Mosaic Hotel</strong> - 0.8 km away - ⭐⭐⭐⭐ - €115/night</div>
+          <div class="hotel"><strong>Güell View Inn</strong> - 1.2 km away - ⭐⭐⭐ - €90/night</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>Created by: Kathleen L. Pagkaliwangan | Class: IT3G</p></footer>
+
+  <script>
+    function toggleHotels(id) {
+      const hotels = document.getElementById(id);
+      hotels.style.display = (hotels.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
