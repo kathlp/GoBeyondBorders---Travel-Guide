@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Go Beyond Borders - Netherlands</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f9ff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #0077b6;
+      color: white;
+      padding: 15px 30px;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6em;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-right: 50px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: #90e0ef;
+    }
+
+    .wonders {
+      padding: 100px 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .wonder {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 300px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .wonder:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .wonder img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .wonder-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 15px;
+    }
+
+    .wonder-content h3 {
+      margin-top: 0;
+      color: #0077b6;
+      font-size: 1.2em;
+    }
+
+    .wonder-content p {
+      font-size: 0.95em;
+      color: #333;
+    }
+
+    .more-btn {
+      margin-top: auto;
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .more-btn:hover {
+      background: #0096c7;
+    }
+
+    .hotels {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: #e6f2ff;
+      border-radius: 8px;
+    }
+
+    .hotel {
+      margin-bottom: 8px;
+      font-size: 0.9em;
+    }
+
+    .hotel strong {
+      color: #023e8a;
+    }
+
+    footer {
+      background: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .wonders {
+        flex-direction: column;
+        align-items: center;
+        padding: 90px 10px 30px;
+      }
+
+      header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+      }
+
+      header h1 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+
+      nav a {
+        margin: 10px;
+      }
+
+      .wonder {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Go Beyond Borders</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="wonders">
+    <div class="wonder">
+      <img src="images/kv.jpg" alt="Kinderdijk Windmills">
+      <div class="wonder-content">
+        <h3>Kinderdijk Windmills</h3>
+        <p>Iconic 18th-century windmills that highlight Dutch water management history.</p>
+        <button class="more-btn" onclick="toggleHotels('kinderdijk-hotels')">More Info</button>
+        <div class="hotels" id="kinderdijk-hotels">
+          <div class="hotel"><strong>Windmill View Hotel</strong> - 1 km away - ⭐⭐⭐⭐ - €110/night</div>
+          <div class="hotel"><strong>Canal Breeze Inn</strong> - 2.5 km away - ⭐⭐⭐ - €90/night</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wonder">
+      <img src="images/anne.jpg" alt="Anne Frank House">
+      <div class="wonder-content">
+        <h3>Anne Frank House</h3>
+        <p>The historic home where Anne Frank hid during WWII, now a powerful museum.</p>
+        <button class="more-btn" onclick="toggleHotels('anne-hotels')">More Info</button>
+        <div class="hotels" id="anne-hotels">
+          <div class="hotel"><strong>Amsterdam Central Stay</strong> - 0.5 km away - ⭐⭐⭐⭐ - €130/night</div>
+          <div class="hotel"><strong>Historical View Hotel</strong> - 0.8 km away - ⭐⭐⭐ - €95/night</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wonder">
+      <img src="images/garden.jpg" alt="Keukenhof Gardens">
+      <div class="wonder-content">
+        <h3>Keukenhof Gardens</h3>
+        <p>World-famous flower garden with millions of blooming tulips in spring.</p>
+        <button class="more-btn" onclick="toggleHotels('keukenhof-hotels')">More Info</button>
+        <div class="hotels" id="keukenhof-hotels">
+          <div class="hotel"><strong>Garden Bloom Inn</strong> - 1.2 km away - ⭐⭐⭐⭐ - €120/night</div>
+          <div class="hotel"><strong>Tulip Stay Hotel</strong> - 1.5 km away - ⭐⭐⭐ - €100/night</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>Created by: Kathleen L. Pagkaliwangan | Class: IT3G</p></footer>
+
+  <script>
+    function toggleHotels(id) {
+      const hotels = document.getElementById(id);
+      hotels.style.display = (hotels.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

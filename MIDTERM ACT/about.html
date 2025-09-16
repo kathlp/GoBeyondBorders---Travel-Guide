@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Go Beyond Borders - About</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f9ff;
+      color: #333;
+      padding-top: 80px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #0077b6;
+      color: white;
+      padding: 15px 30px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6em;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      margin-right: 50px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #90e0ef;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    .creator-section {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .creator-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid #0077b6;
+    }
+
+    .creator-name {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #0077b6;
+    }
+
+    footer {
+      background: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 60px;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 100%;
+      }
+
+      .creator-img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Go Beyond Borders</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>About Go Beyond Borders</h2>
+    <p class="intro">
+      Go Beyond Borders is a travel companion site designed to inspire, guide, and empower adventurers to explore the world’s most beautiful places. Whether you’re planning your next big getaway or looking for hidden gems, we’re here to help.
+    </p>
+
+    <div class="about-section">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>
+          To connect curious travelers with meaningful experiences across borders, cultures, and time zones — making every journey unforgettable.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>
+          To become a trusted resource for global explorers and first-time travelers alike — turning wanderlust into reality, one destination at a time.
+        </p>
+      </div>
+      <div class="card">
+        <h3>What We Offer</h3>
+        <p>
+          Travel blogs, country highlights, practical travel tips, hotel recommendations, and destination guides to enhance your travel experience.
+        </p>
+      </div>
+    </div>
+
+    <!-- Creator Section -->
+    <div class="creator-section">
+      <h2>Meet the Creator</h2>
+      <img src="images/kath.jpg" alt="Creator" class="creator-img" />
+      <p class="creator-name">Kathleen L. Pagkaliwangan</p>
+      <p>ITEG • Information Technology Student</p>
+      <p>Passionate about travel, design, and sharing stories that bring the world closer together.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Created by: Kathleen L. Pagkaliwangan | Class: IT3G</p>
+  </footer>
+
+</body>
+</html>
